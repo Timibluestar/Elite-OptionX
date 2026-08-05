@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width,initial-scale=1.0">
+
+<title>Investor Dashboard | Elite OptionX</title>
+
+<link rel="stylesheet"
+href="style.css"><script defer src="dashboard.js"></script><script defer src="profile.js"></script>
+
+<link rel="stylesheet"
+href="dashboard.css"> <link rel="stylesheet" href="responsive.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<img src="edd8d2aa-480e-4135-ab52-c239bcaf4776.png">
+
+<h2>Elite OptionX</h2>
+
+</div>
+
+<ul>
+
+<li class="active">
+
+<a href="index.html">
+
+<i class="fas fa-home"></i>
+
+Dashboard
+
+</a>
+
+</li>
+
+<li>
+
+<a href="profile.html">
+
+<i class="fas fa-user"></i>
+
+Profile
+
+</a>
+
+</li>
+
+<li>
+
+<a href="portfolio.html">
+
+<i class="fas fa-chart-pie"></i>
+
+Portfolio
+
+</a>
+
+</li>
+
+<li>
+
+<a href="deposit.html">
+
+<i class="fas fa-wallet"></i>
+
+Deposit
+
+</a>
+
+</li>
+
+<li>
+
+<a href="withdraw.html">
+
+<i class="fas fa-money-bill-wave"></i>
+
+Withdraw
+
+</a>
+
+</li>
+
+<li>
+
+<a href="transactions.html">
+
+<i class="fas fa-exchange-alt"></i>
+
+Transactions
+
+</a>
+
+</li>
+
+<li>
+
+<a href="kyc.html">
+
+<i class="fas fa-id-card"></i>
+
+KYC
+
+</a>
+
+</li>
+
+<li>
+
+<a href="bonus.html">
+
+<i class="fas fa-gift"></i>
+
+Bonuses
+
+</a>
+
+</li>
+
+<li>
+
+<a href="support.html">
+
+<i class="fas fa-headset"></i>
+
+Support
+
+</a>
+
+</li>
+
+<li>
+
+<a href="settings.html">
+
+<i class="fas fa-cog"></i>
+
+Settings
+
+</a>
+
+</li>
+
+<li>
+
+<a href="../login.html">
+
+<i class="fas fa-sign-out-alt"></i>
+
+Logout
+
+</a>
+
+</li>
+
+</ul>
+
+</aside>
+
+<header class="dashboard-header">
+
+    <div>
+
+        <h2>Deposit Funds</h2>
+
+        <p>
+            Fund your account using cryptocurrency or gift cards.
+        </p>
+
+    </div>
+
+</header>
+
+<section class="deposit-methods">
+
+    <div class="deposit-card">
+
+        <i class="fab fa-bitcoin"></i>
+
+        <h3>Bitcoin (BTC)</h3>
+
+        <p>Deposit using the company's Bitcoin wallet.</p>
+
+        <button class="primary-btn deposit-btn"
+                data-method="btc">
+
+            Deposit BTC
+
+        </button>
+
+    </div>
+
+    <div class="deposit-card">
+
+        <i class="fab fa-ethereum"></i>
+
+        <h3>Ethereum (ETH)</h3>
+
+        <p>Deposit using the company's Ethereum wallet.</p>
+
+        <button class="primary-btn deposit-btn"
+                data-method="eth">
+
+            Deposit ETH
+
+        </button>
+
+    </div>
+
+    <div class="deposit-card">
+
+        <i class="fas fa-dollar-sign"></i>
+
+        <h3>USDT</h3>
+
+        <p>
+
+            Supports TRC20, ERC20 and BEP20.
+
+        </p>
+
+        <button class="primary-btn deposit-btn"
+                data-method="usdt">
+
+            Deposit USDT
+
+        </button>
+
+    </div>
+
+    <div class="deposit-card">
+
+        <i class="fas fa-gift"></i>
+
+        <h3>Gift Cards</h3>
+
+        <p>
+
+            Upload supported gift cards for review.
+
+        </p>
+
+        <button class="primary-btn deposit-btn"
+                data-method="giftcard">
+
+            Deposit Gift Card
+
+        </button>
+
+    </div>
+
+</section>
+
+<section class="dashboard-panel">
+
+    <h3>Submit Deposit Request</h3>
+
+    <form id="depositForm">
+
+        <div class="form-grid">
+
+            <div>
+
+                <label>Deposit Method</label>
+
+                <select id="depositMethod">
+
+                    <option>Bitcoin (BTC)</option>
+
+                    <option>Ethereum (ETH)</option>
+
+                    <option>USDT (TRC20)</option>
+
+                    <option>Gift Card</option>
+
+                </select>
+
+            </div>
+
+            <div>
+
+                <label>Deposit Amount</label>
+
+                <input
+                    type="number"
+                    placeholder="Enter amount">
+
+            </div>
+
+            <div class="full-width">
+
+                <label>Transaction Hash / Gift Card Details</label>
+
+                <textarea
+                    rows="4"
+                    placeholder="Paste your transaction hash or provide gift card information"></textarea>
+
+            </div>
+
+            <div class="full-width">
+
+                <label>Upload Payment Proof</label>
+
+                <input
+                    type="file"
+                    accept=".jpg,.jpeg,.png,.pdf">
+
+            </div>
+
+        </div>
+
+        <button class="primary-btn">
+
+            Submit Deposit
+
+        </button>
+
+    </form>
+
+</section>
+
+<section class="dashboard-panel">
+
+    <h3>Deposit History</h3>
+
+    <table class="dashboard-table">
+
+        <thead>
+
+            <tr>
+
+                <th>Date</th>
+
+                <th>Method</th>
+
+                <th>Amount</th>
+
+                <th>Status</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>02 Aug 2026</td>
+
+                <td>Bitcoin</td>
+
+                <td>$2,000</td>
+
+                <td>
+
+                    <span class="badge pending">
+
+                        Pending Approval
+
+                    </span>
+
+                </td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+<!-- =====================================
+COMPANY WALLET ADDRESSES
+===================================== -->
+
+<section class="dashboard-panel">
+
+    <h3>Company Deposit Wallets</h3>
+
+    <p class="wallet-note">
+        Send your cryptocurrency only to the wallet that matches your selected network.
+        Deposits are credited after administrator verification.
+    </p>
+
+    <div class="wallet-grid">
+
+        <!-- BTC -->
+
+        <div class="wallet-card">
+
+            <h4>
+                <i class="fab fa-bitcoin"></i>
+                Bitcoin (BTC)
+            </h4>
+
+            <input
+                id="btcWallet"
+                type="text"
+                readonly
+                value="bc1qmqgwwk9g0s4peq2qe79a7wzp0sfl9xzaujx0zr">
+
+            <button
+                class="copy-btn"
+                data-copy="bc1qmqgwwk9g0s4peq2qe79a7wzp0sfl9xzaujx0zr">
+
+                Copy Address
+
+            </button>
+
+            <div class="qr-placeholder">
+                <img src="/QR_1.png"
+                    alt="bc1qmqgwwk9g0s4peq2qe79a7wzp0sfl9xzaujx0zr">
+
+                BTC QR CODE
+
+            </div>
+
+        </div>
+
+        <!-- ETH -->
+
+        <div class="wallet-card">
+
+            <h4>
+                <i class="fab fa-ethereum"></i>
+                Ethereum (ETH)
+            </h4>
+
+            <input
+                id="ethWallet"
+                type="text"
+                readonly
+                value="0x4f0397FeEd89FB7e76ebEe9217c4990077e49aCc">
+
+            <button
+                class="copy-btn"
+                data-copy="0x4f0397FeEd89FB7e76ebEe9217c4990077e49aCc">
+
+                Copy Address
+
+            </button>
+
+            <div class="qr-placeholder">
+                <img src="/QR_2.png"
+                    alt="0x4f0397FeEd89FB7e76ebEe9217c4990077e49aCc">
+
+                ETH QR CODE
+
+            </div>
+
+        </div>
+
+       <div class="wallet-card">
+
+    <h4>
+        <i class="fas fa-dollar-sign"></i>
+        Tether (USDT)
+    </h4>
+
+    <label>Network</label>
+
+    <select id="usdtNetwork">
+
+        <option value="TRC20">TRC20</option>
+
+        
+
+    </select>
+
+    <label>Wallet Address</label>
+
+    <input
+        id="walletAddress"
+        readonly
+        value="TTgXE6dnghvP4Y6M3pm6ZJoRitCebmUU4T">
+
+    <button
+        class="copy-btn"
+        data-copy="TTgXE6dnghvP4Y6M3pm6ZJoRitCebmUU4T">
+
+        Copy Wallet
+
+    </button>
+
+    <div class="qr-box">
+
+        <img
+          src="/QR_3.png"
+            alt="TTgXE6dnghvP4Y6M3pm6ZJoRitCebmUU4T">
+
+    </div>
+
+</div>
+
+</section>
+<section class="dashboard-panel">
+
+<h3>
+
+Deposit Instructions
+
+</h3>
+
+<ul class="deposit-guide">
+
+<li>
+
+Send only the selected cryptocurrency to the correct wallet.
+
+</li>
+
+<li>
+
+Always choose the correct blockchain network.
+
+</li>
+
+<li>
+
+Submit the transaction hash after payment.
+
+</li>
+
+<li>
+
+Upload a clear payment screenshot if available.
+
+</li>
+
+<li>
+
+Deposits are reviewed by our finance team before being credited.
+
+</li>
+
+</ul>
+
+</section>
+
+
+<section class="dashboard-panel">
+
+<h3>
+
+Gift Card Deposit
+
+</h3>
+
+<div class="form-grid">
+
+<div>
+
+<label>
+
+Gift Card Brand
+
+</label>
+
+<select>
+
+<option>Amazon</option>
+
+<option>Apple</option>
+
+<option>Google Play</option>
+
+<option>Steam</option>
+
+<option>Razer Gold</option>
+
+<option>eBay</option>
+
+</select>
+
+</div>
+
+<div>
+
+<label>
+
+Gift Card Value
+
+</label>
+
+<input
+type="number"
+placeholder="100">
+
+</div>
+
+<div class="full-width">
+
+<label>
+
+Gift Card Image
+
+</label>
+
+<input
+type="file"
+accept="image/*">
+
+</div>
+
+</div>
+
+<button class="primary-btn">
+
+Submit Gift Card
+
+</button>
+
+</section>
+
+<section class="dashboard-panel">
+
+<h3>
+
+Deposit Summary
+
+</h3>
+
+<div class="receipt">
+
+<p>
+
+Method:
+<span id="receiptMethod">
+
+Bitcoin
+
+</span>
+
+</p>
+
+<p>
+
+Amount:
+<span id="receiptAmount">
+
+$0
+
+</span>
+
+</p>
+
+<p>
+
+Status:
+
+<span class="badge pending">
+
+Awaiting Admin Approval
+
+</span>
+
+</p>
+
+</div>
+
+</section>
+
+<div id="depositModal"
+class="deposit-modal">
+
+<div class="deposit-content">
+
+<i class="fas fa-check-circle"></i>
+
+<h2>
+
+Deposit Submitted
+
+</h2>
+
+<p>
+
+Your request has been sent successfully.
+
+It is now awaiting administrator approval.
+
+</p>
+
+<button
+id="closeDepositModal"
+class="primary-btn">
+
+OK
+
+</button>
+
+</div>
+
+</div>
+</body>
+</html>

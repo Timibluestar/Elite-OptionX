@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Profile | Elite OptionX</title>
+
+<link rel="stylesheet" href="..css/style.css"><script defer src="..js/dashboard.js"></script>
+<link rel="stylesheet" href="../css/dashboard.css"><link rel="stylesheet" href="../css/responsive.css">
+<script defer src="../js/profile.js"></script>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<script src="assets/data/countries.js"></script>
+<script src="assets/data/languages.js"></script>
+<script src="assets/data/currencies.js"></script> 
+<script src="assets/data/timezones.js"></script>
+<script src="profile.js"></script>
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <!-- Copy the same sidebar from dashboard/index.html -->
+
+    <div class="main-content">
+
+        <header class="dashboard-header">
+
+            <div>
+
+                <h2>My Profile</h2>
+
+                <p>Manage your account information.</p>
+
+            </div>
+
+        </header>
+
+        <section class="profile-container">
+
+            <!-- Left -->
+
+            <div class="profile-card">
+
+                <div class="profile-avatar">
+
+                    <img src="../images/user.jpg" alt="Profile">
+
+                    <label class="upload-btn">
+
+                        <input type="file">
+
+                        Change Photo
+
+                    </label>
+
+                </div>
+
+                <h3>John Doe</h3>
+
+                <p>Investor</p>
+
+            </div>
+
+            <!-- Right -->
+
+            <div class="profile-form">
+
+                <h3>Personal Information</h3>
+
+                <section class="profile-container">
+
+    <!-- Profile Card -->
+
+    <div class="profile-card">
+
+        <div id="dropZone" class="drop-zone">
+
+            <img id="profilePreview"
+                 src="../images/user.jpg"
+                 alt="Profile">
+
+            <p>Drag & Drop Photo</p>
+
+            <small>or click to browse</small>
+
+            <input type="file"
+                   id="profileImage"
+                   accept="image/*"
+                   hidden>
+
+        </div>
+
+        <h3 id="profileName">
+            John Doe
+        </h3>
+
+        <p>Investor Account</p>
+
+        <div class="verification-progress">
+
+            <h4>Verification</h4>
+
+            <div class="progress">
+
+                <div class="progress-bar"></div>
+
+            </div>
+
+            <span>60% Completed</span>
+
+        </div>
+
+    </div>
+
+    <!-- Profile Form -->
+
+    <div class="profile-form">
+
+        <h2>Personal Information</h2>
+
+        <form id="profileForm">
+
+            <div class="form-grid">
+
+                <div>
+
+                    <label>First Name</label>
+
+                    <input
+                        type="text"
+                        id="firstName"
+                        required>
+
+                </div>
+
+                <div>
+
+                    <label>Last Name</label>
+
+                    <input
+                        type="text"
+                        id="lastName"
+                        required>
+
+                </div>
+
+                <div>
+
+                    <label>Email</label>
+
+                    <input
+                        type="email"
+                        id="email">
+
+                </div>
+
+               <div>
+
+    <label>Phone Number</label>
+
+    <div class="phone-group">
+
+        <select id="phoneCode">
+
+            <option value="+1">🇺🇸 +1</option>
+            <option value="+44">🇬🇧 +44</option>
+            <option value="+234">🇳🇬 +234</option>
+            <option value="+33">🇫🇷 +33</option>
+            <option value="+49">🇩🇪 +49</option>
+            <option value="+81">🇯🇵 +81</option>
+            <option value="+971">🇦🇪 +971</option>
+            <option value="+91">🇮🇳 +91</option>
+
+        </select>
+
+        <input
+            type="tel"
+            id="phone"
+            placeholder="Phone Number">
+
+    </div>
+
+</div>
+                <div>
+
+                    <label>Country</label>
+
+                    <select id="country"></select>
+
+                </div>
+
+                <div>
+
+                    <label>Language</label>
+
+                    <select id="language"></select>
+
+                </div>
+
+                <div>
+
+                    <label>Currency</label>
+
+                    <select id="currency"></select>
+
+                </div>
+
+                <div>
+
+                    <label>Time Zone</label>
+
+                    <select id="timezone"></select>
+
+                </div>
+
+                <div>
+
+                    <label>Date of Birth</label>
+
+                    <input type="date">
+
+                </div>
+
+                <div>
+
+                    <label>Occupation</label>
+
+                    <input type="text">
+
+                </div>
+
+                <div class="full-width">
+
+                    <label>Residential Address</label>
+
+                    <textarea rows="4"></textarea>
+
+                </div>
+
+            </div>
+
+            <button class="primary-btn">
+
+                Save Changes
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+            </div>
+
+        </section>
+
+        <!-- Security -->
+
+        <section class="dashboard-panel">
+
+            <h3>Security</h3>
+
+            <div class="security-grid">
+
+                <div>
+
+                    <label>Current Password</label>
+
+                    <input type="password">
+
+                </div>
+
+                <div>
+
+                    <label>New Password</label>
+
+                    <input type="password">
+
+                </div>
+
+                <div>
+
+                    <label>Confirm Password</label>
+
+                    <input type="password">
+
+                </div>
+
+            </div>
+
+            <button class="primary-btn">
+
+                Update Password
+
+            </button>
+
+        </section>
+
+        <!-- KYC -->
+
+        <section class="dashboard-panel">
+
+            <h3>KYC Verification</h3>
+
+            <div class="kyc-status">
+
+                <span class="badge pending">
+
+                    Pending Verification
+
+                </span>
+
+                <p>
+
+                    Upload your government-issued identification and proof of address to complete verification.
+
+                </p>
+
+                <a href="kyc.html" class="primary-btn">
+
+                    Complete KYC
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</div>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>

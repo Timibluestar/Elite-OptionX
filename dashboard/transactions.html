@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investor Transactions | Elite OptionX</title>
+
+<link rel="stylesheet"
+href="style.css"><script defer src="dashboard.js"></script><script defer src="profile.js"></script>
+
+<link rel="stylesheet"
+href="dashboard.css"> <link rel="stylesheet" href="responsive.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+<body>
+    <header class="dashboard-header">
+
+    <div>
+        <h2>Transaction Center</h2>
+        <p>View your complete account activity.</p>
+    </div>
+
+</header>
+
+<section class="transaction-summary">
+
+    <div class="summary-card">
+        <h4>Total Deposits</h4>
+        <h2>$24,500.00</h2>
+    </div>
+
+    <div class="summary-card">
+        <h4>Total Withdrawals</h4>
+        <h2>$8,250.00</h2>
+    </div>
+
+    <div class="summary-card">
+        <h4>Total Profit</h4>
+        <h2>$15,880.00</h2>
+    </div>
+
+    <div class="summary-card">
+        <h4>Total Bonus</h4>
+        <h2>$1,500.00</h2>
+    </div>
+
+</section>
+
+<section class="dashboard-panel">
+
+    <h3>Transaction Statistics</h3>
+
+    <div class="stats-grid">
+
+        <div class="stat-box">
+
+            <h4>This Month</h4>
+
+            <h2 id="monthTotal">$0.00</h2>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h4>This Week</h4>
+
+            <h2 id="weekTotal">$0.00</h2>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h4>Today</h4>
+
+            <h2 id="todayTotal">$0.00</h2>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h4>Total Transactions</h4>
+
+            <h2 id="transactionCount">0</h2>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="dashboard-panel">
+
+<h3>Filter Transactions</h3>
+
+<div class="filter-grid">
+
+<div>
+
+<label>Transaction Type</label>
+
+<select id="filterType">
+
+<option>All</option>
+
+<option>Deposit</option>
+
+<option>Withdrawal</option>
+
+<option>Profit</option>
+
+<option>Bonus</option>
+
+<option>Trade</option>
+
+<option>Fee</option>
+
+</select>
+
+</div>
+
+<div>
+
+<label>Status</label>
+
+<select id="filterStatus">
+
+<option>All</option>
+
+<option>Completed</option>
+
+<option>Pending</option>
+
+<option>Rejected</option>
+
+</select>
+
+</div>
+
+<div>
+
+<label>From Date</label>
+
+<input type="date">
+
+</div>
+
+<div>
+
+<label>To Date</label>
+
+<input type="date">
+
+</div>
+
+</div>
+
+<button class="primary-btn">
+
+Search
+
+</button>
+
+</section>
+
+<div class="transaction-toolbar">
+
+    <input
+        type="text"
+        id="transactionSearch"
+        placeholder="Search by Transaction ID, Method or Type">
+
+</div>
+<section class="dashboard-panel">
+
+<h3>Transaction History</h3>
+
+<table class="dashboard-table" id="transactionTable">
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+
+<th>Date</th>
+
+<th>Type</th>
+
+<th>Method</th>
+
+<th>Amount</th>
+
+<th>Status</th>
+
+<th>Reference</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>#TX10001</td>
+
+<td>04 Aug 2026</td>
+
+<td>Deposit</td>
+
+<td>Bitcoin</td>
+
+<td>$2,000</td>
+
+<td>
+
+<span class="badge success">
+
+Completed
+
+</span>
+
+</td>
+
+<td>BTC54896521</td>
+
+</tr>
+
+<tr>
+
+<td>#TX10002</td>
+
+<td>05 Aug 2026</td>
+
+<td>Withdrawal</td>
+
+<td>USDT</td>
+
+<td>$500</td>
+
+<td>
+
+<span class="badge pending">
+
+Pending
+
+</span>
+
+</td>
+
+<td>USDT3652411</td>
+
+</tr>
+
+<tr>
+
+<td>#TX10003</td>
+
+<td>05 Aug 2026</td>
+
+<td>Profit</td>
+
+<td>Trading</td>
+
+<td>$150</td>
+
+<td>
+
+<span class="badge success">
+
+Credited
+
+</span>
+
+</td>
+
+<td>PRF20355</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section class="dashboard-panel">
+
+<div class="transaction-actions">
+
+<button class="primary-btn">
+
+Export PDF
+
+</button>
+
+<button class="primary-btn">
+
+Export CSV
+
+</button>
+
+<button class="primary-btn">
+
+Print Statement
+
+</button>
+
+</div>
+
+</section>
+<div id="transactionModal" class="deposit-modal">
+
+    <div class="deposit-content receipt-modal">
+
+        <h2>Transaction Receipt</h2>
+
+        <div id="receiptContent">
+
+            <p><strong>ID:</strong> TX00001</p>
+
+            <p><strong>Type:</strong> Deposit</p>
+
+            <p><strong>Method:</strong> Bitcoin</p>
+
+            <p><strong>Amount:</strong> $2,000</p>
+
+            <p><strong>Status:</strong> Completed</p>
+
+            <p><strong>Date:</strong> 04 Aug 2026</p>
+
+        </div>
+
+        <button
+            id="closeReceipt"
+            class="primary-btn">
+
+            Close
+
+        </button>
+
+        <th>Action</th>
+        <td>
+
+<button class="view-btn">
+
+View
+
+</button>
+
+</td>
+
+
+    </div>
+
+</div>
+
+
+</body>
+</html>

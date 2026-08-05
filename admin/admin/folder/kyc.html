@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KYC Dashboard Cards</title> <link rel="stylesheet" href="admin.css">
+    <script defer src="admin.js"></script>
+
+</head>
+<body>
+    <header class="admin-header">
+
+    <div>
+
+        <h2>KYC Verification Center</h2>
+
+        <p>Review and verify investor identity documents.</p>
+
+    </div>
+
+</header>
+
+<section class="admin-cards">
+
+    <div class="admin-card">
+
+        <h4>Pending KYC</h4>
+
+        <h2>18</h2>
+
+    </div>
+
+    <div class="admin-card">
+
+        <h4>Approved Today</h4>
+
+        <h2>9</h2>
+
+    </div>
+
+    <div class="admin-card">
+
+        <h4>Rejected</h4>
+
+        <h2>2</h2>
+
+    </div>
+
+    <div class="admin-card">
+
+        <h4>Total Verified</h4>
+
+        <h2>1,184</h2>
+
+    </div>
+
+</section>
+
+<section class="admin-panel">
+
+    <div class="toolbar">
+
+        <input
+            type="text"
+            id="kycSearch"
+            placeholder="Search investor...">
+
+        <select id="kycFilter">
+
+            <option>All Status</option>
+            <option>Pending</option>
+            <option>Verified</option>
+            <option>Rejected</option>
+
+        </select>
+
+    </div>
+
+</section>
+
+<section class="admin-panel">
+
+<table class="admin-table" id="kycTable">
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+<th>Investor</th>
+<th>Country</th>
+<th>ID Type</th>
+<th>Date Submitted</th>
+<th>Status</th>
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>#INV1001</td>
+
+<td>John Smith</td>
+
+<td>United States</td>
+
+<td>Passport</td>
+
+<td>03 Aug 2026</td>
+
+<td>
+
+<span class="badge pending">
+
+Pending
+
+</span>
+
+</td>
+
+<td>
+
+<button class="action-btn review-btn">
+
+Review
+
+</button>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<div id="kycModal" class="deposit-modal">
+
+<div class="deposit-content kyc-modal">
+
+<h2>KYC Review</h2>
+
+<div class="kyc-images">
+
+<div>
+
+<h4>Government ID</h4>
+
+<img
+src="../images/sample-id.jpg"
+alt="ID Document">
+
+</div>
+
+<div>
+
+<h4>Selfie</h4>
+
+<img
+src="../images/sample-selfie.jpg"
+alt="Selfie">
+
+</div>
+
+<div>
+
+<h4>Proof of Address</h4>
+
+<img
+src="../images/sample-address.jpg"
+alt="Address">
+
+</div>
+
+</div>
+
+<div class="kyc-actions">
+
+<button class="approve-btn">
+
+Approve
+
+</button>
+
+<button class="reject-btn">
+
+Reject
+
+</button>
+
+<button class="request-btn">
+
+Request More Documents
+
+</button>
+
+</div>
+
+<textarea
+id="kycNotes"
+rows="4"
+placeholder="Internal review notes (not visible to investor)"></textarea>
+
+<button
+id="closeKycModal"
+class="primary-btn">
+
+Close
+
+</button>
+
+</div>
+
+</div>
+</body>
+</html>

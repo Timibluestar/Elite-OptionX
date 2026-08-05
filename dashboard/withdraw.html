@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+<title>Investor Dashboard | Elite OptionX</title>
+
+<link rel="stylesheet"
+href="style.css"><script defer src="dashboard.js"></script><script defer src="profile.js"></script>
+
+<link rel="stylesheet"
+href="dashboard.css"> <link rel="stylesheet" href="responsive.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+<body>
+
+<header class="dashboard-header">
+
+    <div>
+
+        <h2>Withdraw Funds</h2>
+
+        <p>Request withdrawals from your investment account.</p>
+
+    </div>
+
+</header>
+
+<section class="dashboard-cards">
+
+    <div class="card">
+
+        <h4>Available Balance</h4>
+
+        <h2>$12,560.00</h2>
+
+    </div>
+
+    <div class="card">
+
+        <h4>Pending Withdrawal</h4>
+
+        <h2>$1,250.00</h2>
+
+    </div>
+
+    <div class="card">
+
+        <h4>Total Withdrawn</h4>
+
+        <h2>$28,400.00</h2>
+
+    </div>
+
+    <div class="card">
+
+        <h4>Status</h4>
+
+        <h2 style="color:#28c76f;">Verified</h2>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+WITHDRAWAL SUMMARY
+===================================== -->
+
+<section class="withdraw-summary">
+
+    <div class="summary-card">
+
+        <h4>Available Balance</h4>
+
+        <h2 id="availableBalance">$12,500.00</h2>
+
+    </div>
+
+    <div class="summary-card">
+
+        <h4>Withdrawal Fee</h4>
+
+        <h2 id="withdrawFee">$0.00</h2>
+
+    </div>
+
+    <div class="summary-card">
+
+        <h4>You Will Receive</h4>
+
+        <h2 id="receiveAmount">$0.00</h2>
+
+    </div>
+
+</section>
+
+<section class="dashboard-panel">
+
+<h3>Withdrawal Request</h3>
+
+<form id="withdrawForm">
+
+<div class="form-grid">
+
+<div>
+
+<label>Withdrawal Method</label>
+
+<select id="withdrawMethod">
+
+<option>Bitcoin (BTC)</option>
+
+<option>Ethereum (ETH)</option>
+
+<option>USDT (TRC20)</option>
+
+<option>USDT (ERC20)</option>
+
+<option>USDT (BEP20)</option>
+
+<option>Bank Transfer</option>
+
+</select>
+
+</div>
+
+<div>
+
+<label>Withdrawal Amount</label>
+
+<input
+type="number"
+id="withdrawAmount"
+placeholder="Enter Amount">
+
+</div>
+
+<div>
+
+<label>Select Saved Wallet</label>
+
+<select id="savedWallet">
+
+<option value="">Choose Wallet</option>
+
+<option>BTC - bc1xxxxxxxxxxxxxxxxxxxx</option>
+
+<option>ETH - 0x8A7Fxxxxxxxxxxxxxxxx</option>
+
+<option>USDT TRC20 - TX4xxxxxxxxxxxxx</option>
+
+<option>Add New Wallet</option>
+
+</select>
+
+</div>
+
+<div class="full-width">
+
+<label>Wallet Address</label>
+
+<input
+id="walletAddress"
+type="text"
+placeholder="Wallet Address">
+
+</div>
+<div>
+
+<label>Withdrawal PIN</label>
+
+<input
+type="password"
+placeholder="4–6 Digit PIN">
+
+</div>
+
+<div>
+
+<label>Email Verification Code</label>
+
+<input
+type="text"
+placeholder="Verification Code">
+
+</div>
+
+</div>
+
+<button class="primary-btn">
+
+Submit Withdrawal
+
+</button>
+
+</form>
+<section class="dashboard-panel">
+
+<h3>
+
+Withdrawal Summary
+
+</h3>
+
+<div class="receipt">
+
+<p>
+
+Method
+
+<span id="receiptMethod">
+
+Bitcoin
+
+</span>
+
+</p>
+
+<p>
+
+Requested
+
+<span id="receiptAmount">
+
+$0.00
+
+</span>
+
+</p>
+
+<p>
+
+Fee
+
+<span id="receiptFee">
+
+$0.00
+
+</span>
+
+</p>
+
+<p>
+
+Receive
+
+<span id="receiptReceive">
+
+$0.00
+
+</span>
+
+</p>
+
+<p>
+
+Status
+
+<span class="badge pending">
+
+Pending Approval
+
+</span>
+
+</p>
+
+</div>
+
+</section>
+</section>
+
+
+<section class="dashboard-panel">
+
+<h3>Withdrawal Information</h3>
+
+<div class="withdraw-info">
+
+<p>
+
+Minimum Withdrawal
+
+<strong>$50</strong>
+
+</p>
+
+<p>
+
+Maximum Withdrawal
+
+<strong>No Limit</strong>
+
+</p>
+
+<p>
+
+Processing Time
+
+<strong>Up to 24 Hours</strong>
+
+</p>
+
+<p>
+
+Status
+
+<span class="badge pending">
+
+Manual Approval Required
+
+</span>
+
+</p>
+
+</div>
+
+</section>
+
+<section class="dashboard-panel">
+
+<h3>Withdrawal History</h3>
+
+<table class="dashboard-table">
+
+<thead>
+
+<tr>
+
+<th>Date</th>
+
+<th>Method</th>
+
+<th>Amount</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>03 Aug 2026</td>
+
+<td>Bitcoin</td>
+
+<td>$500</td>
+
+<td>
+
+<span class="badge success">
+
+Completed
+
+</span>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>01 Aug 2026</td>
+
+<td>USDT</td>
+
+<td>$2,000</td>
+
+<td>
+
+<span class="badge pending">
+
+Pending Approval
+
+</span>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+</div>
+
+</section>
+
+<div id="withdrawModal" class="deposit-modal">
+
+<div class="deposit-content">
+
+<i class="fas fa-check-circle"></i>
+
+<h2>
+
+Withdrawal Submitted
+
+</h2>
+
+<p>
+
+Your request has been received.
+
+Status:
+
+<b>Pending Admin Approval</b>
+
+</p>
+
+<button
+id="closeWithdrawModal"
+class="primary-btn">
+
+OK
+
+</button>
+
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Verify Email | Elite OptionsX</title>
+
+<link rel="stylesheet" href="auth.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<div class="login-container">
+
+<div class="login-card">
+
+<img src="edd8d2aa-480e-4135-ab52-c239bcaf4776.png"
+class="logo"
+alt="Elite OptionsX">
+
+<h2>Verify Your Email</h2>
+
+<p>
+
+Enter the 6-digit verification code sent to your email address.
+
+</p>
+
+<form id="verifyForm">
+
+<div class="verification-box">
+
+<input type="text" maxlength="1" class="code-input" required>
+
+<input type="text" maxlength="1" class="code-input" required>
+
+<input type="text" maxlength="1" class="code-input" required>
+
+<input type="text" maxlength="1" class="code-input" required>
+
+<input type="text" maxlength="1" class="code-input" required>
+
+<input type="text" maxlength="1" class="code-input" required>
+
+</div>
+
+<button type="submit">
+
+Verify Email
+
+</button>
+
+</form>
+
+<p class="countdown">
+
+Resend code in
+
+<span id="timer">
+
+60
+
+</span>
+
+seconds
+
+</p>
+
+<button id="resendBtn"
+class="resend-btn"
+disabled>
+
+Resend Code
+
+</button>
+
+<div class="success-message"
+id="verifySuccess">
+
+<i class="fas fa-circle-check"></i>
+
+<p>
+
+Email verified successfully.
+
+</p>
+
+</div>
+
+<div class="register-link">
+
+<a href="login.html">
+
+← Back to Login
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="auth.js"></script>
+
+</body>
+
+</html>

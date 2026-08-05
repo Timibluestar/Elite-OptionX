@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width,initial-scale=1.0">
+
+<title>Investors Deposit | Elite OptionX</title>
+<script defer src="../..js/admin.js"></script>
+
+<link rel="stylesheet"
+href="../../css/admin.css"> <link rel="stylesheet" href="../../css/responsive.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+<body>
+
+    <header class="admin-header">
+
+    <div>
+
+        <h2>Deposit Approval Center</h2>
+
+        <p>Review and process investor deposit requests.</p>
+
+    </div>
+
+</header>
+
+<section class="admin-cards">
+
+    <div class="admin-card">
+        <h4>Pending Deposits</h4>
+        <h2>18</h2>
+    </div>
+
+    <div class="admin-card">
+        <h4>Approved Today</h4>
+        <h2>11</h2>
+    </div>
+
+    <div class="admin-card">
+        <h4>Rejected Today</h4>
+        <h2>2</h2>
+    </div>
+
+    <div class="admin-card">
+        <h4>Total Deposits</h4>
+        <h2>$482,350</h2>
+    </div>
+
+</section>
+
+<section class="admin-panel">
+
+<div class="toolbar">
+
+<input
+type="text"
+id="depositSearch"
+placeholder="Search investor, email or transaction hash">
+
+<select id="depositMethod">
+
+<option>All Methods</option>
+<option>Bitcoin</option>
+<option>Ethereum</option>
+<option>USDT</option>
+<option>Gift Card</option>
+
+</select>
+
+<select id="depositStatus">
+
+<option>All Status</option>
+<option>Pending</option>
+<option>Approved</option>
+<option>Rejected</option>
+
+</select>
+
+</div>
+
+</section>
+
+<section class="admin-panel">
+
+<table class="admin-table" id="depositTable">
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+<th>Investor</th>
+<th>Method</th>
+<th>Amount</th>
+<th>Transaction Hash</th>
+<th>Status</th>
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>#DP10025</td>
+
+<td>John Smith</td>
+
+<td>Bitcoin</td>
+
+<td>$2,000</td>
+
+<td>bc19f4e85c6...</td>
+
+<td>
+
+<span class="badge pending">
+
+Pending
+
+</span>
+
+</td>
+
+<td>
+
+<button class="action-btn reviewDeposit">
+
+Review
+
+</button>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<div id="depositReviewModal" class="deposit-modal">
+
+<div class="deposit-content kyc-modal">
+
+<h2>Deposit Review</h2>
+
+<div class="info-grid">
+
+<p><strong>Investor</strong><span>John Smith</span></p>
+
+<p><strong>Method</strong><span>Bitcoin</span></p>
+
+<p><strong>Amount</strong><span>$2,000</span></p>
+
+<p><strong>Wallet Network</strong><span>BTC</span></p>
+
+<p><strong>Transaction Hash</strong><span>bc19f4e85c6...</span></p>
+
+<p><strong>Date Submitted</strong><span>04 Aug 2026</span></p>
+
+</div>
+
+<h3>Payment Proof</h3>
+
+<img
+src=""
+class="proof-image"
+alt="Payment Proof">
+
+<textarea
+id="depositNote"
+rows="4"
+placeholder="Internal finance notes..."></textarea>
+
+<div class="kyc-actions">
+
+<button class="approve-btn">
+
+Approve Deposit
+
+</button>
+
+<button class="reject-btn">
+
+Reject Deposit
+
+</button>
+
+<button class="request-btn">
+
+Request More Information
+
+</button>
+
+</div>
+
+<button
+id="closeDepositReview"
+class="primary-btn">
+
+Close
+
+</button>
+
+</div>
+
+</div>
+</body>
+</html>
