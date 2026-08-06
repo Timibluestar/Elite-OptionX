@@ -74,3 +74,41 @@ document
 depositModal.style.display="none";
 
 });
+
+function animateCounter(id,end,duration=1800){
+
+    const element=document.getElementById(id);
+
+    if(!element) return;
+
+    let start=0;
+
+    const increment=end/(duration/16);
+
+    const timer=setInterval(()=>{
+
+        start+=increment;
+
+        if(start>=end){
+
+            start=end;
+
+            clearInterval(timer);
+
+        }
+
+        element.textContent=Math.floor(start).toLocaleString();
+
+    },16);
+
+}
+
+animateCounter("totalInvestors",1285);
+
+animateCounter("pendingApprovals",17);
+
+animateCounter("pendingKyc",12);
+
+animateCounter("supportTickets",4);
+
+animateCounter("activeUsers",963);

@@ -513,3 +513,548 @@ resize:vertical;
 margin-bottom:20px;
 
 }
+
+/*====================================
+    Dashboard Statistics
+====================================*/
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+}
+
+.stat-card{
+
+    background:#ffffff;
+
+    border-radius:16px;
+
+    padding:25px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+    gap:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+}
+
+.stat-icon{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:16px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:26px;
+
+    color:#fff;
+
+}
+
+.stat-info{
+
+    flex:1;
+
+}
+
+.stat-info h3{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    margin-bottom:6px;
+
+    color:#1d2939;
+
+}
+
+.stat-info p{
+
+    color:#667085;
+
+    font-size:15px;
+
+}
+
+.investors .stat-icon{
+
+    background:#2563eb;
+
+}
+
+.deposits .stat-icon{
+
+    background:#16a34a;
+
+}
+
+.withdrawals .stat-icon{
+
+    background:#dc2626;
+
+}
+
+.pending .stat-icon{
+
+    background:#f59e0b;
+
+}
+
+.profit .stat-icon{
+
+    background:#9333ea;
+
+}
+
+.kyc .stat-icon{
+
+    background:#0f766e;
+
+}
+
+.support .stat-icon{
+
+    background:#0284c7;
+
+}
+
+.active .stat-icon{
+
+    background:#059669;
+
+}
+
+/*====================================
+        Quick Actions
+====================================*/
+
+.quick-actions{
+
+    margin-top:35px;
+
+}
+
+.section-title{
+
+    margin-bottom:20px;
+
+}
+
+.section-title h2{
+
+    font-size:24px;
+
+    color:#1d2939;
+
+    margin-bottom:5px;
+
+}
+
+.section-title p{
+
+    color:#667085;
+
+}
+
+.actions-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:22px;
+
+}
+
+.action-card{
+
+    background:#fff;
+
+    border-radius:16px;
+
+    padding:28px 20px;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    color:#1d2939;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    border:1px solid #eef2f7;
+
+}
+
+.action-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+    border-color:#2563eb;
+
+}
+
+.action-card i{
+
+    width:70px;
+
+    height:70px;
+
+    line-height:70px;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+    color:#fff;
+
+    font-size:28px;
+
+    margin-bottom:18px;
+
+}
+
+.action-card h4{
+
+    margin-bottom:10px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+.action-card span{
+
+    display:block;
+
+    color:#667085;
+
+    font-size:14px;
+
+    line-height:1.6;
+
+}
+
+.action-card:hover i{
+
+    transform:rotate(10deg) scale(1.08);
+
+    transition:.3s;
+
+}
+
+/*====================================
+        Pending Approvals
+====================================*/
+
+.pending-approvals{
+
+    margin-top:40px;
+
+}
+
+.approval-table{
+
+    background:#fff;
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.approval-table table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.approval-table th{
+
+    background:#1d2939;
+
+    color:#fff;
+
+    padding:18px;
+
+    text-align:left;
+
+    font-weight:600;
+
+}
+
+.approval-table td{
+
+    padding:18px;
+
+    border-bottom:1px solid #eef2f7;
+
+}
+
+.approval-table tr:hover{
+
+    background:#f8fafc;
+
+}
+
+.status{
+
+    padding:6px 14px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.status.pending{
+
+    background:#fff7ed;
+
+    color:#ea580c;
+
+}
+
+.status.new{
+
+    background:#ecfeff;
+
+    color:#0891b2;
+
+}
+
+.status.approved{
+
+    background:#dcfce7;
+
+    color:#15803d;
+
+}
+
+.status.rejected{
+
+    background:#fee2e2;
+
+    color:#dc2626;
+
+}
+
+.btn-view{
+
+    background:#2563eb;
+
+    color:#fff;
+
+    padding:9px 16px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn-view:hover{
+
+    background:#1d4ed8;
+
+}
+
+@media(max-width:992px){
+
+.approval-table{
+
+    overflow-x:auto;
+
+}
+
+.approval-table table{
+
+    min-width:900px;
+
+}
+
+}
+
+/*====================================
+        Activity & Notifications
+====================================*/
+
+.activity-wrapper{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
+
+    gap:25px;
+
+    margin-top:40px;
+
+}
+
+.activity-card{
+
+    background:#fff;
+
+    border-radius:16px;
+
+    padding:25px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.notification-item{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:15px;
+
+    padding:15px 0;
+
+    border-bottom:1px solid #eef2f7;
+
+}
+
+.notification-item:last-child{
+
+    border-bottom:none;
+
+}
+
+.notify-icon{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#fff;
+
+    font-size:18px;
+
+}
+
+.deposit{background:#16a34a;}
+.withdrawal{background:#dc2626;}
+.user{background:#2563eb;}
+.kyc{background:#9333ea;}
+
+.notify-text h4{
+
+    margin:0 0 5px;
+
+    font-size:16px;
+
+}
+
+.notify-text p{
+
+    color:#667085;
+
+    margin:0;
+
+}
+
+.notify-text small{
+
+    color:#98a2b3;
+
+}
+
+.activity-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:16px 0;
+
+    border-bottom:1px solid #eef2f7;
+
+}
+
+.activity-item:last-child{
+
+    border-bottom:none;
+
+}
+
+.activity-item i{
+
+    font-size:18px;
+
+}
+
+.success{color:#16a34a;}
+.primary{color:#2563eb;}
+.danger{color:#dc2626;}
+.warning{color:#f59e0b;}
+.secondary{color:#64748b;}
+
+@media(max-width:768px){
+
+.activity-wrapper{
+
+    grid-template-columns:1fr;
+
+}
+
+}

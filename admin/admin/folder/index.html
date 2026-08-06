@@ -8,13 +8,13 @@
 <meta name="viewport"
 content="width=device-width,initial-scale=1.0">
 
-<title>Admin Dashboard | Elite OptionX</title>
+<title>Elite OptionX | Admin Dashboard</title>
 
 <link rel="stylesheet"
-href="style.css"><script defer src="admin.js"></script>
+href="/css/style.css"><script defer src="/js/admin.js"></script>
 
 <link rel="stylesheet"
-href="admin.css"> <link rel="stylesheet" href="responsive.css">
+href="/css/admin.css"> <link rel="stylesheet" href="/css/responsive.css">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -28,7 +28,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
     <aside class="admin-sidebar">
 
-        <div class="logo"><img src="/edd8d2aa-480e-4135-ab52-c239bcaf4776.png">
+        <div class="logo"><img src="/images/edd8d2aa-480e-4135-ab52-c239bcaf4776.png">
 
             <h2>Elite OptionX</h2>
 
@@ -83,61 +83,450 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     </aside>
 
     <!-- Main -->
+<section class="dashboard-header">
 
-    <main class="admin-main">
+    <div class="welcome">
 
-        <header class="admin-header">
+        <h1>Welcome back, Administrator</h1>
 
-            <h2>Admin Dashboard</h2>
+        <p>
+            Elite OptionX Broker Control Center
+        </p>
 
-            <div class="admin-user">
+    </div>
 
-                Administrator
+    <div class="current-date">
+
+        <span id="currentDate"></span>
+
+    </div>
+
+</section>
+<section class="stats-grid">
+
+    <div class="stat-card investors">
+        <div class="stat-icon">
+            <i class="fas fa-users"></i>
+        </div>
+
+        <div class="stat-info">
+            <h3 id="totalInvestors">1285</h3>
+            <p>Total Investors</p>
+        </div>
+    </div>
+
+    <div class="stat-card deposits">
+        <div class="stat-icon">
+            <i class="fas fa-wallet"></i>
+        </div>
+
+        <div class="stat-info">
+            <h3 id="totalDeposits">$4.53M</h3>
+            <p>Total Deposits</p>
+        </div>
+    </div>
+
+    <div class="stat-card withdrawals">
+        <div class="stat-icon">
+            <i class="fas fa-money-bill-wave"></i>
+        </div>
+
+        <div class="stat-info">
+            <h3 id="totalWithdrawals">$820K</h3>
+            <p>Total Withdrawals</p>
+        </div>
+    </div>
+
+    <div class="stat-card pending">
+        <div class="stat-icon">
+            <i class="fas fa-clock"></i>
+        </div>
+
+        <div class="stat-info">
+            <h3 id="pendingApprovals">17</h3>
+            <p>Pending Approvals</p>
+        </div>
+    </div>
+
+    <div class="stat-card profit">
+        <div class="stat-icon">
+            <i class="fas fa-chart-line"></i>
+        </div>
+
+        <div class="stat-info">
+            <h3 id="companyProfit">$1.25M</h3>
+            <p>Company Profit</p>
+        </div>
+    </div>
+
+    <div class="stat-card kyc">
+        <div class="stat-icon">
+            <i class="fas fa-id-card"></i>
+        </div>
+
+        <div class="stat-info">
+            <h3 id="pendingKyc">12</h3>
+            <p>Pending KYC</p>
+        </div>
+    </div>
+
+    <div class="stat-card support">
+        <div class="stat-icon">
+            <i class="fas fa-headset"></i>
+        </div>
+
+        <div class="stat-info">
+            <h3 id="supportTickets">4</h3>
+            <p>Support Tickets</p>
+        </div>
+    </div>
+
+    <div class="stat-card active">
+        <div class="stat-icon">
+            <i class="fas fa-user-check"></i>
+        </div>
+
+        <div class="stat-info">
+            <h3 id="activeUsers">963</h3>
+            <p>Active Investors</p>
+        </div>
+    </div>
+
+</section>
+
+<section class="quick-actions">
+
+</section>
+<section class="quick-actions">
+
+    <div class="section-title">
+        <h2>Quick Actions</h2>
+        <p>Frequently used administrative functions</p>
+    </div>
+
+    <div class="actions-grid">
+
+        <a href="investors.html" class="action-card">
+            <i class="fas fa-user-plus"></i>
+            <h4>Investor Management</h4>
+            <span>View, edit & manage investors</span>
+        </a>
+
+        <a href="deposits.html" class="action-card">
+            <i class="fab fa-bitcoin"></i>
+            <h4>Approve Deposits</h4>
+            <span>BTC • ETH • USDT • Gift Cards</span>
+        </a>
+
+        <a href="withdrawals.html" class="action-card">
+            <i class="fas fa-money-check-alt"></i>
+            <h4>Approve Withdrawals</h4>
+            <span>Review withdrawal requests</span>
+        </a>
+
+        <a href="investor-profile.html" class="action-card">
+            <i class="fas fa-coins"></i>
+            <h4>Manual Profit</h4>
+            <span>Credit or debit investor balances</span>
+        </a>
+
+        <a href="wallets.html" class="action-card">
+            <i class="fas fa-wallet"></i>
+            <h4>Company Wallets</h4>
+            <span>Manage crypto wallet addresses</span>
+        </a>
+
+        <a href="kyc.html" class="action-card">
+            <i class="fas fa-id-card"></i>
+            <h4>KYC Verification</h4>
+            <span>Approve identity documents</span>
+        </a>
+
+        <a href="reports.html" class="action-card">
+            <i class="fas fa-chart-bar"></i>
+            <h4>Reports</h4>
+            <span>View financial analytics</span>
+        </a>
+
+        <a href="settings.html" class="action-card">
+            <i class="fas fa-cogs"></i>
+            <h4>Platform Settings</h4>
+            <span>Configure the broker platform</span>
+        </a>
+
+    </div>
+
+</section>
+<section class="pending-approvals">
+
+    <div class="section-title">
+        <h2>Pending Approvals</h2>
+        <p>Items requiring administrator attention</p>
+    </div>
+
+    <div class="approval-table">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Investor</th>
+
+                    <th>Request</th>
+
+                    <th>Amount</th>
+
+                    <th>Date</th>
+
+                    <th>Status</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>John Doe</td>
+
+                    <td>BTC Deposit</td>
+
+                    <td>$2,500</td>
+
+                    <td>Today</td>
+
+                    <td><span class="status pending">Pending</span></td>
+
+                    <td>
+
+                        <a href="deposits.html" class="btn-view">Review</a>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Sarah Johnson</td>
+
+                    <td>Withdrawal</td>
+
+                    <td>$1,250</td>
+
+                    <td>Today</td>
+
+                    <td><span class="status pending">Pending</span></td>
+
+                    <td>
+
+                        <a href="withdrawals.html" class="btn-view">Review</a>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Michael Smith</td>
+
+                    <td>KYC Verification</td>
+
+                    <td>—</td>
+
+                    <td>Yesterday</td>
+
+                    <td><span class="status pending">Pending</span></td>
+
+                    <td>
+
+                        <a href="kyc.html" class="btn-view">Review</a>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Emily Brown</td>
+
+                    <td>New Registration</td>
+
+                    <td>—</td>
+
+                    <td>Yesterday</td>
+
+                    <td><span class="status new">New</span></td>
+
+                    <td>
+
+                        <a href="investors.html" class="btn-view">Open</a>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+<section class="activity-wrapper">
+
+    <!-- Notifications -->
+
+    <div class="activity-card">
+
+        <div class="section-title">
+
+            <h2>Notifications</h2>
+
+            <p>Latest system events</p>
+
+        </div>
+
+        <div class="notification-list">
+
+            <div class="notification-item">
+
+                <div class="notify-icon deposit">
+                    <i class="fas fa-wallet"></i>
+                </div>
+
+                <div class="notify-text">
+
+                    <h4>BTC Deposit Received</h4>
+
+                    <p>John Doe deposited $2,500</p>
+
+                    <small>2 minutes ago</small>
+
+                </div>
 
             </div>
 
-        </header>
+            <div class="notification-item">
 
-        <!-- Dashboard Cards -->
+                <div class="notify-icon withdrawal">
+                    <i class="fas fa-money-bill-wave"></i>
+                </div>
 
-        <section class="admin-cards">
+                <div class="notify-text">
 
-            <div class="admin-card">
+                    <h4>Withdrawal Request</h4>
 
-                <h4>Total Investors</h4>
+                    <p>Sarah Johnson requested $1,250</p>
 
-                <h2>1,250</h2>
+                    <small>8 minutes ago</small>
 
-            </div>
-
-            <div class="admin-card">
-
-                <h4>Pending Deposits</h4>
-
-                <h2>18</h2>
+                </div>
 
             </div>
 
-            <div class="admin-card">
+            <div class="notification-item">
 
-                <h4>Pending Withdrawals</h4>
+                <div class="notify-icon user">
+                    <i class="fas fa-user-plus"></i>
+                </div>
 
-                <h2>7</h2>
+                <div class="notify-text">
+
+                    <h4>New Investor Registered</h4>
+
+                    <p>Michael Smith created an account</p>
+
+                    <small>20 minutes ago</small>
+
+                </div>
 
             </div>
 
-            <div class="admin-card">
+            <div class="notification-item">
 
-                <h4>Pending KYC</h4>
+                <div class="notify-icon kyc">
+                    <i class="fas fa-id-card"></i>
+                </div>
 
-                <h2>12</h2>
+                <div class="notify-text">
+
+                    <h4>KYC Uploaded</h4>
+
+                    <p>Emily Brown submitted documents</p>
+
+                    <small>1 hour ago</small>
+
+                </div>
 
             </div>
 
-        </section>
+        </div>
 
-    </main>
+    </div>
 
-</div>
+    <!-- Admin Activity -->
+
+    <div class="activity-card">
+
+        <div class="section-title">
+
+            <h2>Admin Activity</h2>
+
+            <p>Recent administrative actions</p>
+
+        </div>
+
+        <div class="activity-list">
+
+            <div class="activity-item">
+
+                <i class="fas fa-check-circle success"></i>
+
+                <span>Approved BTC deposit for John Doe</span>
+
+            </div>
+
+            <div class="activity-item">
+
+                <i class="fas fa-plus-circle primary"></i>
+
+                <span>Added $500 bonus to Sarah Johnson</span>
+
+            </div>
+
+            <div class="activity-item">
+
+                <i class="fas fa-ban danger"></i>
+
+                <span>Rejected withdrawal request</span>
+
+            </div>
+
+            <div class="activity-item">
+
+                <i class="fas fa-cog secondary"></i>
+
+                <span>Updated company wallet address</span>
+
+            </div>
+
+            <div class="activity-item">
+
+                <i class="fas fa-user-edit warning"></i>
+
+                <span>Modified investor profile</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 </body>
 </html>

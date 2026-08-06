@@ -376,3 +376,13 @@ document.getElementById("transactionModal")
 .style.display="none";
 
 };
+
+const today = new Date();
+
+document.getElementById("currentDate").innerHTML =
+today.toLocaleDateString(undefined,{
+weekday:"long",
+year:"numeric",
+month:"long",
+day:"numeric"
+});
