@@ -12,16 +12,225 @@ content="width=device-width,initial-scale=1.0">
 <title>Investors | Elite OptionX</title>
 
 <link rel="stylesheet"
-href="style.css"><script defer src="admin.js"></script>
+href="/css/style.css"><script defer src="/js/admin.js"></script>
 
 <link rel="stylesheet"
-href="admin.css"> <link rel="stylesheet" href="responsive.css">
+href="/css/admin.css"> <link rel="stylesheet" href="/css/responsive.css">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
 <body>
+    <section class="investor-summary">
+
+    <div class="summary-card">
+        <h3>Total Investors</h3>
+        <h1>1,285</h1>
+    </div>
+
+    <div class="summary-card">
+        <h3>Active Accounts</h3>
+        <h1>963</h1>
+    </div>
+
+    <div class="summary-card">
+        <h3>Suspended</h3>
+        <h1>22</h1>
+    </div>
+
+    <div class="summary-card">
+        <h3>Pending KYC</h3>
+        <h1>17</h1>
+    </div>
+
+</section>
+
+<section class="investor-toolbar">
+
+    <input
+        type="text"
+        id="investorSearch"
+        placeholder="Search by name, email or username">
+
+    <select id="statusFilter">
+
+        <option value="">All Status</option>
+
+        <option>Active</option>
+
+        <option>Suspended</option>
+
+        <option>Pending KYC</option>
+
+    </select>
+
+    <select id="countryFilter">
+
+        <option>All Countries</option>
+
+        <option>Nigeria</option>
+
+        <option>United States</option>
+
+        <option>United Kingdom</option>
+
+    </select>
+
+    <button class="btn-export">
+
+        Export CSV
+
+    </button>
+
+    <button class="btn-add">
+
+        + Add Investor
+
+    </button>
+
+</section>
+<section class="investor-table-section">
+
+    <div class="table-header">
+
+        <h2>Investor Directory</h2>
+
+        <span>Showing 1–20 of 1,285 Investors</span>
+
+    </div>
+
+    <div class="table-responsive">
+
+        <table class="investor-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        <input type="checkbox" id="selectAll">
+                    </th>
+
+                    <th>ID</th>
+
+                    <th>Investor</th>
+
+                    <th>Country</th>
+
+                    <th>Balance</th>
+
+                    <th>Total Deposits</th>
+
+                    <th>KYC</th>
+
+                    <th>Level</th>
+
+                    <th>Status</th>
+
+                    <th>Last Login</th>
+
+                    <th>Actions</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>
+                        <input type="checkbox">
+                    </td>
+
+                    <td>#1001</td>
+
+                    <td>
+
+                        <div class="investor-info">
+
+                            <img src="../uploads/avatar.png" alt="Investor">
+
+                            <div>
+
+                                <strong>John Doe</strong>
+
+                                <small>john@email.com</small>
+
+                            </div>
+
+                        </div>
+
+                    </td>
+
+                    <td>Nigeria</td>
+
+                    <td>$5,420</td>
+
+                    <td>$18,900</td>
+
+                    <td>
+                        <span class="badge verified">Verified</span>
+                    </td>
+
+                    <td>
+                        <span class="level gold">Gold</span>
+                    </td>
+
+                    <td>
+                        <span class="badge active">Active</span>
+                    </td>
+
+                    <td>5 mins ago</td>
+
+                    <td>
+
+                        <div class="action-dropdown">
+
+                            <button class="action-btn">
+                                Actions ▼
+                            </button>
+
+                            <div class="dropdown-menu">
+
+                                <a href="investor-profile.html">View Profile</a>
+
+                                <a href="#">Edit Profile</a>
+
+                                <a href="#">Credit Balance</a>
+
+                                <a href="#">Debit Balance</a>
+
+                                <a href="#">Add Profit</a>
+
+                                <a href="#">Suspend Account</a>
+
+                                <a href="#" class="danger">
+                                    Delete Account
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+</tr>
+
+</tbody>
+
+</table>
 
 
 

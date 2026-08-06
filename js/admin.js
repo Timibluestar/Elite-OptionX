@@ -112,3 +112,164 @@ animateCounter("pendingKyc",12);
 animateCounter("supportTickets",4);
 
 animateCounter("activeUsers",963);
+
+new Chart(document.getElementById("financeChart"),{
+
+type:"line",
+
+data:{
+
+labels:["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
+
+datasets:[
+
+{
+
+label:"Deposits",
+
+data:[12000,18000,15000,21000,24000,27000,32000],
+
+borderColor:"#16a34a",
+
+backgroundColor:"rgba(22,163,74,.15)",
+
+fill:true,
+
+tension:.4
+
+},
+
+{
+
+label:"Withdrawals",
+
+data:[5000,8000,6000,9000,11000,10000,13000],
+
+borderColor:"#dc2626",
+
+backgroundColor:"rgba(220,38,38,.15)",
+
+fill:true,
+
+tension:.4
+
+}
+
+]
+
+}
+
+});
+
+new Chart(document.getElementById("investorChart"),{
+
+type:"bar",
+
+data:{
+
+labels:["Jan","Feb","Mar","Apr","May","Jun"],
+
+datasets:[{
+
+label:"New Investors",
+
+data:[80,110,95,140,170,210],
+
+backgroundColor:"#2563eb"
+
+}]
+
+}
+
+});
+
+new Chart(document.getElementById("assetChart"),{
+
+type:"doughnut",
+
+data:{
+
+labels:["BTC","ETH","USDT","Gift Cards"],
+
+datasets:[{
+
+data:[40,25,30,5],
+
+backgroundColor:[
+
+"#f7931a",
+
+"#627eea",
+
+"#26a17b",
+
+"#8b5cf6"
+
+]
+
+}]
+
+}
+
+});
+
+new Chart(document.getElementById("revenueChart"),{
+
+type:"line",
+
+data:{
+
+labels:["Q1","Q2","Q3","Q4"],
+
+datasets:[{
+
+label:"Revenue",
+
+data:[120000,180000,250000,340000],
+
+borderColor:"#9333ea",
+
+backgroundColor:"rgba(147,51,234,.15)",
+
+fill:true,
+
+tension:.4
+
+}]
+
+}
+
+});
+
+//Investor Search
+
+//Status Filter
+
+//Country Filter
+
+//Bulk Actions
+
+//Pagination
+
+//Table Sorting
+
+Export
+
+//Dropdown Actions
+
+const selectAll = document.getElementById("selectAll");
+
+if (selectAll) {
+
+    selectAll.addEventListener("change", function () {
+
+        document.querySelectorAll(".investor-table tbody input[type='checkbox']")
+            .forEach(box => {
+
+                box.checked = this.checked;
+
+            });
+
+    });
+
+}

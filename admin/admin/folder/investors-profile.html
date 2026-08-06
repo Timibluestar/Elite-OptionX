@@ -11,10 +11,10 @@ content="width=device-width,initial-scale=1.0">
 <title>Investors Profile | Elite OptionX</title>
 
 <link rel="stylesheet"
-href="style.css"><script defer src="admin.js"></script>
+href="/css/style.css"><script defer src="/js/admin.js"></script>
 
 <link rel="stylesheet"
-href="admin.css"> <link rel="stylesheet" href="responsive.css">
+href="/css/admin.css"> <link rel="stylesheet" href="/css/responsive.css">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -22,39 +22,19 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 </head>
 <body>
 
-
-     <header class="admin-header">
-
-    <div>
-
-        <h2>Investor Profile</h2>
-
-        <p>Manage investor account information.</p>
-
-    </div>
-
-</header>
-
-<section class="investor-header">
+<section class="profile-header">
 
     <div class="profile-left">
 
-        <img
-            src=""
-            class="profile-photo"
-            alt="Investor">
+        <img src="../uploads/avatar.png" class="profile-photo">
 
         <div>
 
-            <h2>John Smith</h2>
+            <h2>John Doe</h2>
 
-            <p>#INV100245</p>
+            <p>ID #1001</p>
 
-            <span class="badge success">
-
-                Active Account
-
-            </span>
+            <span class="badge active">Active Investor</span>
 
         </div>
 
@@ -62,13 +42,241 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
     <div class="profile-right">
 
-        <button class="primary-btn">
+        <button class="btn-primary">
+            Send Email
+        </button>
 
-            Edit Profile
-
+        <button class="btn-warning">
+            Suspend
         </button>
 
     </div>
+
+</section>
+<section class="manual-controls">
+
+<h2>Account Controls</h2>
+
+<button>
+
+Credit Balance
+
+</button>
+
+<button>
+
+Debit Balance
+
+</button>
+
+<button>
+
+Add Profit
+
+</button>
+
+<button>
+
+Remove Profit
+
+</button>
+
+<button>
+
+Signup Bonus
+
+</button>
+
+<button>
+
+Referral Bonus
+
+</button>
+
+<button>
+
+Freeze Account
+
+</button>
+
+<button>
+
+Activate Account
+
+</button>
+
+</section>
+<section class="deposit-summary">
+
+    <div class="summary-card">
+        <h3>Pending Deposits</h3>
+        <h1>12</h1>
+    </div>
+
+    <div class="summary-card">
+        <h3>Approved Today</h3>
+        <h1>28</h1>
+    </div>
+
+    <div class="summary-card">
+        <h3>Total Today</h3>
+        <h1>$52,430</h1>
+    </div>
+
+    <div class="summary-card">
+        <h3>Rejected Today</h3>
+        <h1>3</h1>
+    </div>
+
+</section>
+
+<section class="deposit-toolbar">
+
+    <input
+        type="text"
+        placeholder="Search investor...">
+
+    <select>
+
+        <option>All Status</option>
+
+        <option>Pending</option>
+
+        <option>Approved</option>
+
+        <option>Rejected</option>
+
+    </select>
+
+    <select>
+
+        <option>All Methods</option>
+
+        <option>Bitcoin</option>
+
+        <option>Ethereum</option>
+
+        <option>USDT TRC20</option>
+
+        <option>USDT ERC20</option>
+
+        <option>Gift Card</option>
+
+        <option>Bank Transfer</option>
+
+    </select>
+
+    <input type="date">
+
+    <button class="btn-export">
+
+        Export
+
+    </button>
+
+</section>
+
+<section class="table-responsive">
+
+<table class="deposit-table">
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+
+<th>Investor</th>
+
+<th>Method</th>
+
+<th>Amount</th>
+
+<th>Wallet</th>
+
+<th>Proof</th>
+
+<th>Date</th>
+
+<th>Status</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>#DEP1024</td>
+
+<td>
+
+John Doe
+
+</td>
+
+<td>
+
+BTC
+
+</td>
+
+<td>
+
+$2,500
+
+</td>
+
+<td>
+
+bc1q...9hf2
+
+</td>
+
+<td>
+
+<button class="btn-proof">
+
+View Receipt
+
+</button>
+
+</td>
+
+<td>
+
+Today
+
+</td>
+
+<td>
+
+<span class="badge pending">
+
+Pending
+
+</span>
+
+</td>
+
+<td>
+
+<button class="btn-review">
+
+Review
+
+</button>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
 
 </section>
 
@@ -103,6 +311,58 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         <h4>Total Profit</h4>
 
         <h2>$8,140.00</h2>
+
+    </div>
+
+</section>
+<section class="manual-controls">
+
+    <div class="section-title">
+        <h2>Balance & Profit Management</h2>
+        <p>Manual financial adjustments for this investor</p>
+    </div>
+
+    <div class="control-grid">
+
+        <button class="control-btn credit">
+            <i class="fas fa-plus-circle"></i>
+            Credit Balance
+        </button>
+
+        <button class="control-btn debit">
+            <i class="fas fa-minus-circle"></i>
+            Debit Balance
+        </button>
+
+        <button class="control-btn profit">
+            <i class="fas fa-chart-line"></i>
+            Add Profit
+        </button>
+
+        <button class="control-btn loss">
+            <i class="fas fa-chart-line-down"></i>
+            Remove Profit
+        </button>
+
+        <button class="control-btn bonus">
+            <i class="fas fa-gift"></i>
+            Signup Bonus
+        </button>
+
+        <button class="control-btn referral">
+            <i class="fas fa-user-friends"></i>
+            Referral Bonus
+        </button>
+
+        <button class="control-btn freeze">
+            <i class="fas fa-lock"></i>
+            Freeze Account
+        </button>
+
+        <button class="control-btn activate">
+            <i class="fas fa-lock-open"></i>
+            Activate Account
+        </button>
 
     </div>
 

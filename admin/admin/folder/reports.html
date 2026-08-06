@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width,initial-scale=1.0">
+
+<title>Elite OptionX | Admin Reports</title>
+
+<link rel="stylesheet"
+href="/css/style.css"><script defer src="/js/admin.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet"
+href="/css/admin.css"> <link rel="stylesheet" href="/css/responsive.css">
+<link rel="stylesheet" href="/css/reports.css"><script defer src="/js/reports.js"></script>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+    <section class="reports-summary">
+
+    <div class="summary-card">
+        <h3>Total Investors</h3>
+        <h1>2,456</h1>
+        <small>+8.5% this month</small>
+    </div>
+
+    <div class="summary-card">
+        <h3>Total Deposits</h3>
+        <h1>$1,250,430</h1>
+        <small>+$32,400 today</small>
+    </div>
+
+    <div class="summary-card">
+        <h3>Total Withdrawals</h3>
+        <h1>$640,200</h1>
+        <small>$14,800 today</small>
+    </div>
+
+    <div class="summary-card">
+        <h3>Net Revenue</h3>
+        <h1>$610,230</h1>
+        <small>48.8% Margin</small>
+    </div>
+
+</section>
+
+<section class="report-toolbar">
+
+    <input type="date">
+
+    <input type="date">
+
+    <select>
+
+        <option>All Countries</option>
+
+        <option>Nigeria</option>
+
+        <option>United Kingdom</option>
+
+        <option>Canada</option>
+
+        <option>United States</option>
+
+    </select>
+
+    <button class="btn-primary">
+
+        Apply Filter
+
+    </button>
+
+    <button class="btn-export">
+
+        Export PDF
+
+    </button>
+
+    <button class="btn-export">
+
+        Export Excel
+
+    </button>
+
+</section>
+
+<section class="chart-card">
+
+    <div class="card-header">
+
+        <h2>Revenue Overview</h2>
+
+    </div>
+
+    <canvas id="revenueChart"></canvas>
+
+</section>
+
+<section class="chart-card">
+
+    <h2>Deposits vs Withdrawals</h2>
+
+    <canvas id="financeChart"></canvas>
+
+</section>
+
+<section class="chart-card">
+
+    <h2>Investor Growth</h2>
+
+    <canvas id="investorChart"></canvas>
+
+</section>
+
+<table class="country-table">
+
+<thead>
+
+<tr>
+
+<th>Country</th>
+
+<th>Investors</th>
+
+<th>Deposits</th>
+
+<th>Revenue</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>🇳🇬 Nigeria</td>
+
+<td>845</td>
+
+<td>$520,000</td>
+
+<td>$230,000</td>
+
+</tr>
+
+<tr>
+
+<td>🇬🇧 United Kingdom</td>
+
+<td>601</td>
+
+<td>$340,000</td>
+
+<td>$148,000</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<table class="payment-table">
+
+<thead>
+
+<tr>
+
+<th>Method</th>
+
+<th>Transactions</th>
+
+<th>Total Volume</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Bitcoin</td>
+
+<td>510</td>
+
+<td>$420,000</td>
+
+</tr>
+
+<tr>
+
+<td>USDT</td>
+
+<td>398</td>
+
+<td>$315,000</td>
+
+</tr>
+
+<tr>
+
+<td>Ethereum</td>
+
+<td>212</td>
+
+<td>$185,000</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<table class="activity-table">
+
+<thead>
+
+<tr>
+
+<th>Time</th>
+
+<th>Investor</th>
+
+<th>Action</th>
+
+<th>Amount</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>10:25 AM</td>
+
+<td>John Doe</td>
+
+<td>Deposit Approved</td>
+
+<td>$2,500</td>
+
+<td>
+
+<span class="badge success">
+
+Completed
+
+</span>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>

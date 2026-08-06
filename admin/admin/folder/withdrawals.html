@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width,initial-scale=1.0">
+
+<title>Elite OptionX | Admin Withdrawals</title>
+
+<link rel="stylesheet"
+href="/css/style.css"><script defer src="/js/admin.js"></script>
+
+<link rel="stylesheet"
+href="/css/admin.css"> <link rel="stylesheet" href="/css/responsive.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="/css/withdrawals.css"><script defer src="/js/withdrawals.js"></script>
+</head>
+<body>
+
+    <section class="withdraw-summary">
+
+    <div class="summary-card">
+        <h3>Pending Withdrawals</h3>
+        <h1>18</h1>
+    </div>
+
+    <div class="summary-card">
+        <h3>Approved Today</h3>
+        <h1>14</h1>
+    </div>
+
+    <div class="summary-card">
+        <h3>Rejected Today</h3>
+        <h1>2</h1>
+    </div>
+
+    <div class="summary-card">
+        <h3>Total Paid Today</h3>
+        <h1>$36,800</h1>
+    </div>
+
+</section>
+
+<section class="withdraw-toolbar">
+
+    <input
+        type="text"
+        placeholder="Search investor...">
+
+    <select>
+
+        <option>All Status</option>
+        <option>Pending</option>
+        <option>Approved</option>
+        <option>Rejected</option>
+
+    </select>
+
+    <select>
+
+        <option>All Methods</option>
+        <option>Bitcoin</option>
+        <option>Ethereum</option>
+        <option>USDT TRC20</option>
+        <option>USDT ERC20</option>
+        <option>Bank Transfer</option>
+
+    </select>
+
+    <input type="date">
+
+    <button class="btn-export">
+        Export
+    </button>
+
+</section>
+
+
+<section class="table-responsive">
+
+<table class="withdraw-table">
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+
+<th>Investor</th>
+
+<th>Method</th>
+
+<th>Wallet / Bank</th>
+
+<th>Amount</th>
+
+<th>Requested</th>
+
+<th>Status</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>#WD1001</td>
+
+<td>John Doe</td>
+
+<td>BTC</td>
+
+<td>bc1q...7x9p</td>
+
+<td>$2,300</td>
+
+<td>Today</td>
+
+<td>
+
+<span class="badge pending">
+
+Pending
+
+</span>
+
+</td>
+
+<td>
+
+<button class="btn-review">
+
+Review
+
+</button>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- Withdrawal Review Modal -->
+
+<div id="withdrawModal" class="modal">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h2>Withdrawal Review</h2>
+
+            <span class="close-withdraw-modal">&times;</span>
+
+        </div>
+
+        <div class="modal-body">
+
+            <!-- LEFT PANEL -->
+
+            <div class="withdraw-left">
+
+                <div class="investor-card">
+
+                    <img src="../uploads/avatar.png" class="profile-photo">
+
+                    <h3>John Doe</h3>
+
+                    <p>ID #1001</p>
+
+                    <span class="badge active">
+                        Active Investor
+                    </span>
+
+                </div>
+
+                <div class="balance-card">
+
+                    <h3>Account Summary</h3>
+
+                    <div class="detail-row">
+                        <span>Wallet Balance</span>
+                        <strong>$5,420</strong>
+                    </div>
+
+                    <div class="detail-row">
+                        <span>Profit Balance</span>
+                        <strong>$1,850</strong>
+                    </div>
+
+                    <div class="detail-row">
+                        <span>Bonus Balance</span>
+                        <strong>$300</strong>
+                    </div>
+
+                    <div class="detail-row">
+                        <span>Available Balance</span>
+                        <strong class="text-success">
+                            $7,570
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT PANEL -->
+
+            <div class="withdraw-right">
+
+                <h3>Withdrawal Details</h3>
+
+                <div class="detail-row">
+                    <span>Method</span>
+                    <strong>Bitcoin</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>Amount</span>
+                    <strong>$2,300</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>Wallet Address</span>
+                    <strong>bc1qxxxxxxxxxxxxxxxx</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>Request Date</span>
+                    <strong>Today</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>Reference</span>
+                    <strong>#WD1001</strong>
+                </div>
+
+                <label>
+
+                    Admin Notes
+
+                </label>
+
+                <textarea
+                    rows="5"
+                    placeholder="Enter approval or rejection notes..."></textarea>
+
+            </div>
+
+        </div>
+
+        <div class="verification-section">
+
+            <h3>Approval Checklist</h3>
+
+            <label><input type="checkbox"> KYC Verified</label>
+
+            <label><input type="checkbox"> Email Verified</label>
+
+            <label><input type="checkbox"> Phone Verified</label>
+
+            <label><input type="checkbox"> Sufficient Balance</label>
+
+            <label><input type="checkbox"> AML Check Passed</label>
+
+            <label><input type="checkbox"> Wallet Verified</label>
+
+        </div>
+
+        <div class="modal-footer">
+
+            <button class="btn-reject">
+
+                Reject Withdrawal
+
+            </button>
+
+            <button class="btn-approve" id="approveBtn" disabled>
+
+                Approve Withdrawal
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1058,3 +1058,326 @@ margin-bottom:20px;
 }
 
 }
+
+/*====================================
+        Analytics
+====================================*/
+
+.analytics-section{
+
+    margin-top:40px;
+
+}
+
+.analytics-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
+
+    gap:25px;
+
+}
+
+.chart-card{
+
+    background:#fff;
+
+    border-radius:16px;
+
+    padding:25px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.chart-card h3{
+
+    margin-bottom:20px;
+
+    color:#1d2939;
+
+}
+
+.chart-card canvas{
+
+    width:100% !important;
+
+    height:320px !important;
+
+}
+
+@media(max-width:768px){
+
+.analytics-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+/*====================================
+        Investor Table
+====================================*/
+
+.table-responsive{
+
+    overflow-x:auto;
+
+}
+
+.investor-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:#fff;
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.investor-table th{
+
+    background:#1d2939;
+
+    color:#fff;
+
+    padding:18px;
+
+    text-align:left;
+
+    white-space:nowrap;
+
+}
+
+.investor-table td{
+
+    padding:18px;
+
+    border-bottom:1px solid #eef2f7;
+
+    white-space:nowrap;
+
+}
+
+.investor-table tr:hover{
+
+    background:#f8fafc;
+
+}
+
+.investor-info{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.investor-info img{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+
+.investor-info strong{
+
+    display:block;
+
+}
+
+.investor-info small{
+
+    color:#667085;
+
+}
+
+.level{
+
+    padding:6px 12px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.level.basic{
+
+    background:#e5e7eb;
+
+}
+
+.level.silver{
+
+    background:#dbeafe;
+
+}
+
+.level.gold{
+
+    background:#fef3c7;
+
+}
+
+.level.vip{
+
+    background:#ede9fe;
+
+}
+
+.action-dropdown{
+
+    position:relative;
+
+}
+
+.action-btn{
+
+    background:#2563eb;
+
+    color:#fff;
+
+    border:none;
+
+    padding:8px 14px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+.dropdown-menu{
+
+    display:none;
+
+    position:absolute;
+
+    right:0;
+
+    top:40px;
+
+    width:220px;
+
+    background:#fff;
+
+    border-radius:12px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+    z-index:100;
+
+}
+
+.dropdown-menu a{
+
+    display:block;
+
+    padding:12px 16px;
+
+    text-decoration:none;
+
+    color:#1d2939;
+
+}
+
+.dropdown-menu a:hover{
+
+    background:#f3f4f6;
+
+}
+
+.dropdown-menu .danger{
+
+    color:#dc2626;
+
+}
+
+.action-dropdown:hover .dropdown-menu{
+
+    display:block;
+
+}
+
+/*====================================
+    Manual Account Controls
+====================================*/
+
+.manual-controls{
+
+    margin-top:35px;
+
+}
+
+.control-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+
+}
+
+.control-btn{
+
+    border:none;
+
+    padding:20px;
+
+    border-radius:14px;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.control-btn i{
+
+    display:block;
+
+    font-size:26px;
+
+    margin-bottom:12px;
+
+}
+
+.control-btn:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.credit{background:#16a34a;}
+.debit{background:#dc2626;}
+.profit{background:#2563eb;}
+.loss{background:#ea580c;}
+.bonus{background:#9333ea;}
+.referral{background:#0f766e;}
+.freeze{background:#475569;}
+.activate{background:#059669;}

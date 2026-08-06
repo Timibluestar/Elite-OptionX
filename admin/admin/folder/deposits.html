@@ -9,14 +9,16 @@
 content="width=device-width,initial-scale=1.0">
 
 <title>Investors Deposit | Elite OptionX</title>
-<script defer src="../..js/admin.js"></script>
 
 <link rel="stylesheet"
-href="../../css/admin.css"> <link rel="stylesheet" href="../../css/responsive.css">
+href="/css/style.css"><script defer src="/js/admin.js"></script>
+<link rel="stylesheet" href="/css/deposits.css"> <script defer src="/js/deposits.js"></script>
+
+<link rel="stylesheet"
+href="/css/admin.css"> <link rel="stylesheet" href="/css/responsive.css">
+
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-</head>
 <body>
 
     <header class="admin-header">
@@ -214,6 +216,244 @@ Close
 </button>
 
 </div>
+
+</div>
+
+<!-- Deposit Review Modal -->
+
+<div id="depositModal" class="modal">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h2>Deposit Review</h2>
+
+            <span class="close-modal">&times;</span>
+
+        </div>
+
+        <div class="modal-body">
+
+            <!-- Left -->
+
+   <div class="receipt-viewer">
+
+    <div class="receipt-toolbar">
+
+        <button id="zoomIn">
+            <i class="fas fa-search-plus"></i>
+        </button>
+
+        <button id="zoomOut">
+            <i class="fas fa-search-minus"></i>
+        </button>
+
+        <button id="rotateImage">
+            <i class="fas fa-sync-alt"></i>
+        </button>
+
+        <button id="downloadReceipt">
+            <i class="fas fa-download"></i>
+        </button>
+
+    </div>
+
+    <div class="receipt-container">
+
+        <img
+            id="receiptImage"
+            src="../uploads/sample-receipt.jpg"
+            alt="Receipt">
+
+    </div>
+
+</div>
+<div class="verification-panel">
+
+    <h3>Verification Checklist</h3>
+
+    <div class="verify-item">
+
+        <span>Wallet Address Match</span>
+
+        <span class="check success">
+            ✓
+        </span>
+
+    </div>
+
+    <div class="verify-item">
+
+        <span>Amount Match</span>
+
+        <span class="check success">
+            ✓
+        </span>
+
+    </div>
+
+    <div class="verify-item">
+
+        <span>Transaction Hash</span>
+
+        <span class="check warning">
+            Pending
+        </span>
+
+    </div>
+
+    <div class="verify-item">
+
+        <span>Duplicate Transaction</span>
+
+        <span class="check success">
+            None
+        </span>
+
+    </div>
+
+    <div class="verify-item">
+
+        <span>Blockchain Confirmations</span>
+
+        <span class="check warning">
+            2 / 6
+        </span>
+
+    </div>
+
+    <div class="verify-item">
+
+        <span>Risk Score</span>
+
+        <span class="risk-low">
+
+            Low Risk
+
+        </span>
+
+    </div>
+
+</div>
+
+<div class="blockchain-links">
+
+    <h3>Blockchain Verification</h3>
+
+    <a href="#" target="_blank">
+
+        View on Blockchain Explorer
+
+    </a>
+
+    <a href="#" target="_blank">
+
+        View Transaction Hash
+
+    </a>
+
+</div>
+            <!-- Right -->
+
+            <div class="modal-right">
+
+                <div class="detail-row">
+
+                    <span>Investor</span>
+
+                    <strong id="investorName">
+                        John Doe
+                    </strong>
+
+                </div>
+
+                <div class="detail-row">
+
+                    <span>Deposit Method</span>
+
+                    <strong id="depositMethod">
+                        Bitcoin
+                    </strong>
+
+                </div>
+
+                <div class="detail-row">
+
+                    <span>Amount</span>
+
+                    <strong id="depositAmount">
+                        $2,500
+                    </strong>
+
+                </div>
+
+                <div class="detail-row">
+
+                    <span>Wallet</span>
+
+                    <strong id="walletAddress">
+                        bc1qxxxxxxxxxxxxxxxx
+                    </strong>
+
+                </div>
+
+                <div class="detail-row">
+
+                    <span>Transaction Hash</span>
+
+                    <strong id="txHash">
+                        9d73bd82hshd...
+                    </strong>
+
+                </div>
+
+                <div class="detail-row">
+
+                    <span>Date Submitted</span>
+
+                    <strong>
+                        Today 10:25 AM
+                    </strong>
+
+                </div>
+
+                <label>
+
+                    Admin Notes
+
+                </label>
+
+                <textarea
+                    id="adminNotes"
+                    rows="5"
+                    placeholder="Enter approval or rejection notes..."></textarea>
+
+                <div class="modal-actions">
+
+                    <button class="btn-approve">
+
+                        <i class="fas fa-check"></i>
+
+                        Approve
+
+                    </button>
+
+                    <button class="btn-reject">
+
+                        <i class="fas fa-times"></i>
+
+                        Reject
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </div>
 </body>
